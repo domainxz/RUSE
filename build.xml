@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default = "compile" basedir = ".">
+	<property name = "RUSE"  value = "RUSE" />
+	<property name = "base" value = "." />
+	<property name = "src" value = "RUSE" />
+	<property name = "bin" value = "bin" />
+	<property name = "doc" value = "doc/api" />
+	<property name = "lib" value = "lib" />
+	<property name = "third" value = "c:\ruse\lib"/>
+	<property name = "myclasspath" value = "${build}" />
+	
+	<mkdir dir="${lib}"   />  
+	<copy todir="${lib}">   
+		<fileset dir="${third}"></fileset>   
+	</copy> 
+	
+	<target name = "compile">
+		<mkdir dir = "${bin}" />
+		<javac classpath = "${myclasspath};${lib}/poi-3.1-FINAL-20080629.jar;${lib}/poi-scratchpad-3.1-FINAL-20080629.jar;${lib}/snowball.jar" srcdir = "${base}" destdir = "${bin}">
+		</javac>
+	</target>
+	
+	<target name="javadoc">
+		<mkdir dir="${doc}"/>
+		<javadoc access="protected" author="true" classpath="${myclasspath};${lib}/poi-3.1-FINAL-20080629.jar;${lib}/poi-scratchpad-3.1-FINAL-20080629.jar;${lib}/snowball.jar" destdir="${doc}" doctitle="RUSE" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="src.*" source="1.5" sourcepath="." splitindex="true" use="true" version="true"/>
+	</target>
+
+	<target name="dist" depends="compile,javadoc">
+		 <jar destfile="ruse.jar" basedir="${bin}">
+				<manifest>
+						<attribute name="Main-Class" value="src.test.Main"/>
+						<attribute name="Class-Path" value="${lib}/poi-3.1-FINAL-20080629.jar ${lib}/poi-scratchpad-3.1-FINAL-20080629.jar ${lib}/snowball.jar"/>
+				</manifest>
+		</jar>
+	</target>	
+
+	<target name = "clean">
+		<delete includeEmptyDirs = "true">
+			<fileset dir = "${bin}" />
+			<fileset file = "ruse.jar" />
+			<fileset dir = "${doc}" />
+		</delete>
+	</target>
+</project>
