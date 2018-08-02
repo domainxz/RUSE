@@ -1,4 +1,6 @@
-package src.main.fileManager;
+package src.test;
+
+import src.main.fileManager.FileScanner;
 
 //Test application
 public class TestFileScanner {

@@ -20,6 +20,7 @@ public class WordIndexLoader implements Subject {
 	BufferedReader br;
 	boolean isStop = false;
 	
+	@SuppressWarnings("unused")
 	private WordIndexLoader(){}
 	/**
 	 * Create a file input stream to get index

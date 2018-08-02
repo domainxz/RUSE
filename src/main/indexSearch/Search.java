@@ -36,6 +36,7 @@ public class Search {
 	SimpleSearch ss;
 	
 	//Create a default object is forbidden
+	@SuppressWarnings("unused")
 	private Search(){}
 	
 	public Search(String indexDir, String s){

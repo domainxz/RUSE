@@ -64,6 +64,7 @@ public abstract class SimpleSearch implements Interpretable{
 		try{
 			FileInputStream fis = new FileInputStream(indexDir + File.separator + indexFile);
 			InputStreamReader isr = new InputStreamReader(fis);
+			@SuppressWarnings("resource")
 			BufferedReader br = new BufferedReader(isr);
 			contents = (br.readLine().trim()).split(" ");
 		}

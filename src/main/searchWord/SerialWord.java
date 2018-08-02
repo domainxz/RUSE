@@ -10,11 +10,11 @@ import src.main.indexSearch.Operation;
  */
 public class SerialWord {
 	//This table is shared by all the object
-	static HashMap<String, String> hm = new HashMap<String, String>(50);
+	public static HashMap<String, String> hm = new HashMap<String, String>(50);
 	//proximity distance
-	int distance;
+	public int distance;
 	//The number of key word
-	int bound = 0;
+	public int bound = 0;
 	//Temp result of first scanning
 	String fileString;
 	//the contents of query

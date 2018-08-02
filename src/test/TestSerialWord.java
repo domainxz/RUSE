@@ -1,6 +1,7 @@
-package src.main.searchWord;
+package src.test;
 
 import src.main.indexSearch.Operation;
+import src.main.searchWord.SerialWord;
 
 public class TestSerialWord {
 	public static void main(String[] args){

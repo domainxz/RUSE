@@ -37,7 +37,7 @@ public abstract class Decoder implements Decodable{
 	private void getHashCode(char temp){
 		buffer.append(Character.toLowerCase(temp));
 		n = Character.toLowerCase(temp) % 'a';
-		value += n * count * count * count * count * count;//The hash method is ¡Æbit(i)*count^5
+		value += n * Math.pow(count, 5);//The hash method is ¡Æbit(i)*count^5
 		count++;
 	}
 	//Append the index into the HashTable

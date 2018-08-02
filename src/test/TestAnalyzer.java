@@ -1,7 +1,9 @@
-package src.main.indexSearch;
+package src.test;
 //Test the search.class
 import java.util.StringTokenizer;
 
+import src.main.indexSearch.Operation;
+import src.main.indexSearch.Search;
 
 public class TestAnalyzer {
 	public static void main(String[] args){

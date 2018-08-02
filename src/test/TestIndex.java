@@ -1,4 +1,4 @@
-package src.main.simpleSearch;
+package src.test;
 
 import java.util.HashMap;
 

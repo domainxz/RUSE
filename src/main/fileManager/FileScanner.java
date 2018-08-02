@@ -15,6 +15,7 @@ public class FileScanner {
 	/**Keep the list of all the files**/
 	
 	//Create a default object is forbidden
+	@SuppressWarnings("unused")
 	private FileScanner(){}
 	
 	public FileScanner(String directory){

@@ -8,6 +8,7 @@ import java.io.OutputStreamWriter;
 
 public abstract class Index {
 	File f;
+	@SuppressWarnings("rawtypes")
 	Comparable[] key;
 	String[] contents;
 	int size = 200;
@@ -28,6 +29,7 @@ public abstract class Index {
 	 * This method will compare the element and append them
 	 * @param s the element to be appended into the table
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	protected void createIndex(Comparable s){
 		int i = 0;
 		for(; i < count; i++)

@@ -2,7 +2,7 @@ package src.main.indexSearch;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import cn.edu.nju.software.ruse.Tester.Result;
+import src.main.Tester.Result;
 /**
  * 
  * @author dxz
